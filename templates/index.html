@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Detection</h1>
+        <div class="upload-area" id="dropZone">
+            <p class="upload-text">Drop your image here or click to upload</p>
+            <input type="file" id="imageInput" accept="image/*">
+            <img id="preview" class="preview-image" alt="Preview">
+        </div>
+        <button id="predictBtn" disabled>Analyze Emotion</button>
+        <div id="result" style="display: none; margin-top: 20px;"></div>
+    </div>
+    
+    <script src="{{ url_for('static', path='/js/main.js') }}"></script>
+</body>
+</html>
